@@ -1,5 +1,7 @@
 package com.api.api_user.domain.dto;
 
+import java.sql.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,9 +9,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDto {
+public class ClienteDto {
     Long id;
+    String cpf;
     String nome;
-    String login;
-    String email;  
+    Boolean sexo;
+    Date DataNascimento;
 }
