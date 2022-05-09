@@ -4,6 +4,7 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,10 +36,12 @@ public class Cliente {
     String nome;
     @Column(name="sexo")
     @NotBlank(message="O sexo é obrigatório")
-    @Length(message="O sexo só pode ser masculino ou feminino")
     Boolean sexo;
     @Column(name="DataNascimento")
     @NotBlank(message = "A data de nascimento é obrigatória")
     @Length(message = "O campo nascimento deve ser uma data")
     Date DataNascimento;
+    @Column(name="endereco_id")
+    @NotBlank(message = "O endereço é obrigatório")
+    Long endereco_id;
 }

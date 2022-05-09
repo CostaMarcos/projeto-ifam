@@ -15,4 +15,5 @@ public class ClienteDto {
     String nome;
     Boolean sexo;
     Date DataNascimento;
+    Long endereco_id;
 }

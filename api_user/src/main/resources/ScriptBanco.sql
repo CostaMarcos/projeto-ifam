@@ -14,5 +14,16 @@ CREATE TABLE cliente(
     nome varchar(64) NOT NULL,
     sexo BIT NOT NULL,
     DataNascimento DATE NOT NULL,
+    FOREIGN KEY (endereco_id), 
     PRIMARY KEY (id)
+)
+
+CREATE TABLE endereco(
+    id int AUTO_INCREMENT,
+    cep varchar(10) NOT NULL,
+    rua varchar(64) NOT NULL,
+    bairro varchar(64) NOT NULL,
+    numero int NOT NULL,
+    cidade varchar(64) NOT NULL,
+    uf varchar(2) NOT NULL
 )
