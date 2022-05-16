@@ -12,8 +12,11 @@ CREATE TABLE cliente(
     id int AUTO_INCREMENT,
     cpf varchar(11) NOT NULL,
     nome varchar(64) NOT NULL,
-    sexo BIT NOT NULL,
+    sexo varchar(1) NOT NULL,
     DataNascimento DATE NOT NULL,
+    login varchar(64) NOT NULL,
+    senha varchar(64) NOT NULL,
+    email varchar(64) NOT NULL,
     FOREIGN KEY (endereco_id), 
     PRIMARY KEY (id)
 )
@@ -25,5 +28,6 @@ CREATE TABLE endereco(
     bairro varchar(64) NOT NULL,
     numero int NOT NULL,
     cidade varchar(64) NOT NULL,
-    uf varchar(2) NOT NULL
+    uf varchar(2) NOT NULL,
+    PRIMARY KEY (id)
 )
