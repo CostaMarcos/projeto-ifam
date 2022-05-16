@@ -17,13 +17,13 @@ CREATE TABLE cliente(
     login varchar(64) NOT NULL,
     senha varchar(64) NOT NULL,
     email varchar(64) NOT NULL,
-    FOREIGN KEY (endereco_id), 
+    FOREIGN KEY (endereco), 
     PRIMARY KEY (id)
 )
 
 CREATE TABLE endereco(
     id int AUTO_INCREMENT,
-    cep varchar(10) NOT NULL,
+    cep varchar(11) NOT NULL,
     rua varchar(64) NOT NULL,
     bairro varchar(64) NOT NULL,
     numero int NOT NULL,

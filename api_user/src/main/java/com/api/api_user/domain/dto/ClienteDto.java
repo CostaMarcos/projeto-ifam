@@ -1,6 +1,7 @@
 package com.api.api_user.domain.dto;
 
 import java.sql.Date;
+import com.api.api_user.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,5 +16,9 @@ public class ClienteDto {
     String nome;
     Boolean sexo;
     Date DataNascimento;
-    Long endereco_id;
+    EnderecoDto endereco;
+
+    String login;
+    String senha;
+    String email;
 }

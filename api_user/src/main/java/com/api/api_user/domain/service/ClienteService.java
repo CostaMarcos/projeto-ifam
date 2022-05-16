@@ -70,4 +70,9 @@ public class ClienteService {
 
         return responseDto;
     }
+
+    public ClienteDto login(String login, String senha) {
+        Cliente cliente = clienteRepository.findByLoginAndSenha(login, senha);
+        return modelMapper.map(cliente, ClienteDto.class);
+    }
 }

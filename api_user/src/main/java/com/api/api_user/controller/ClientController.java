@@ -49,4 +49,9 @@ public class ClientController {
     public ResponseDto deleteCliente(@Valid @PathVariable Long id) {
         return clienteService.deleteCliente(id);
     }
+
+    @PostMapping(value = "/login/{login}/{senha}")
+    public ClienteDto login(@Valid @PathVariable String login, @Valid @PathVariable String senha) {
+        return clienteService.login(login, senha);
+    }	
 }
